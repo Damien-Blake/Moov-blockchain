@@ -1,6 +1,13 @@
 # Moov-blockchain
 # Moov-blockchain
-Project 1
+Workshop 1
+
+Transcation id for project one
+
+
+at12qslh9cn2wgp9djl58wunsew3ucwnmcz0y3cpgrz5puu3jc6pyxqpckq35
+
+Code used
 // The 'dante_salvador_blake_hello1' program.
 program dante_salvador_blake_hello1.aleo {
     transition main(public a: u32, b: u32) -> u32 {
@@ -11,15 +18,19 @@ program dante_salvador_blake_hello1.aleo {
 
 //this allowed the code to 
 to deploy a hello world program identifying the data type required for the public and private info//
-//using this
 
+//using this
 leo run main 2u32 3u32 --network testnet
 
-project 2
+WORKSHOP 2
 
-// The 'dante_salvador_blake_hello1_token1' program.
-// This example demonstrates an example of a minting and transferring a token in Leo.
-program dante_salvador_blake_hello1_token1.aleo {
+Transcation id for project two
+
+
+at13t927g8ur9f9va6unma9v3urd04hfjvfznksp9vr654k7hw04u8stxm2qn
+
+// The 'dante_salvador_token1' program.
+program dante_salvador_token1.aleo {
     // The `Token` record datatype.
     record Token {
         // The token owner.
@@ -27,7 +38,6 @@ program dante_salvador_blake_hello1_token1.aleo {
         // The token amount.
         amount: u64,
     }
-
     // The `mint` function initializes a new record with the
     // specified number of tokens assigned to the specified receiver.
     transition mint(owner: address, amount: u64) -> Token {
@@ -36,7 +46,6 @@ program dante_salvador_blake_hello1_token1.aleo {
             amount: amount,
         };
     }
-
     // The `transfer` function sends the specified number of tokens
     // to the receiver from the provided token record.
     transition transfer(token: Token, to: address, amount: u64) -> (Token, Token) {
@@ -64,9 +73,15 @@ program dante_salvador_blake_hello1_token1.aleo {
     }
 }
 
-this code was to collect just the token and theamount sent.
+// THIS code takes record of transaction carried out then store info about it and calculate what is deducted from the senders account and keeps record of the balance 
 
-project 3
+
+Workshop 3
+
+Transcation id for project three
+
+
+at1jxxl6k2gvxl3z4u3c9czhrhwgh7rzlcvpmc4n9xx5ulkxkch6u8sjntsl2
 
 // The 'dante_projectwork3' program.
 // The 'aleo_voice7' program.
@@ -162,18 +177,5 @@ program dante_projectwork3.aleo {
     }
 }
 
-this allowed us to transfer the the fun sec8urely
-
-
-
-Transcation id for project one 
-at12qslh9cn2wgp9djl58wunsew3ucwnmcz0y3cpgrz5puu3jc6pyxqpckq35
-
-
-Transcation id for project two
-at13t927g8ur9f9va6unma9v3urd04hfjvfznksp9vr654k7hw04u8stxm2qn
-
-
-Transcation id for project three
-at1jxxl6k2gvxl3z4u3c9czhrhwgh7rzlcvpmc4n9xx5ulkxkch6u8sjntsl2
+this allowed the info gotten from the sender and reciever to be stored and using updates every detail after transaction
 
