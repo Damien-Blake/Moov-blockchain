@@ -8,6 +8,7 @@ Transcation id for project one
 at12qslh9cn2wgp9djl58wunsew3ucwnmcz0y3cpgrz5puu3jc6pyxqpckq35
 
 Code used
+
 // The 'dante_salvador_blake_hello1' program.
 program dante_salvador_blake_hello1.aleo {
     transition main(public a: u32, b: u32) -> u32 {
@@ -17,10 +18,19 @@ program dante_salvador_blake_hello1.aleo {
 }
 
 //this allowed the code to 
-to deploy a hello world program identifying the data type required for the public and private info//
+to deploy a hello program  
+identifying the data type fotr the input to be u32 and must be the same for a and b for c to be successful//
 
-//using this
-leo run main 2u32 3u32 --network testnet
+//using this command
+
+Command : leo run main 2u32 3u32 --network testnet
+
+// generated private key in your .env needs to be change to that of your Leo wallet private key
+//where main = transition is function name, 3u32 and 2u32 is the inputs and network is specified testnet.
+
+
+
+
 
 WORKSHOP 2
 
@@ -73,15 +83,26 @@ program dante_salvador_token1.aleo {
     }
 }
 
-// THIS code takes record of transaction carried out then store info about it and calculate what is deducted from the senders account and keeps record of the balance 
 
+//using this command
 
+1st Command : leo run mint <type_aleo_address> <type_amount>u64
+
+2nd command: leo run transfer "<Token_Record>" <to_address> <amount>u64
+
+// generated private key in your .env needs to be change to that of your Leo wallet private key
+// We were  able to use the generated record from 1st command to input into the second command's first input and then add to address and amount 
+// THIS code takes generate records of transaction carried out then store info and output the change record after transcation. 
+
+ 
 Workshop 3
 
 Transcation id for project three
 
 
 at1jxxl6k2gvxl3z4u3c9czhrhwgh7rzlcvpmc4n9xx5ulkxkch6u8sjntsl2
+
+
 
 // The 'dante_projectwork3' program.
 // The 'aleo_voice7' program.
@@ -177,5 +198,11 @@ program dante_projectwork3.aleo {
     }
 }
 
-this allowed the info gotten from the sender and reciever to be stored and using updates every detail after transaction
+//using this command
+
+Command : leo run combine_hash_owner_receiver <type_your_address> <type_friend_address>
+                                                                      
+//This has only 2 inputs where first input is owner address (self.caller) and second input is the  receiver address
+// generated private key in your .env needs to be change to that of your Leo wallet private key
+//this allowed the info gotten from the sender and reciever to be stored and using updates every detail after transaction
 
